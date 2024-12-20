@@ -24,7 +24,8 @@ const GroupCard = ({ card }) => {
 			</div>
 			{card.description && (
 				<p className="py-4 -mt-1">
-					<strong>✨ Описание:</strong> {card.description}
+					<strong>✨ Описание:</strong>{" "}
+					<span className="text-zinc-600 italic leading-relaxed">{card.description}</span>
 				</p>
 			)}
 			<div className="flex flex-col gap-1">
@@ -33,7 +34,10 @@ const GroupCard = ({ card }) => {
 				</span>
 				{card.link && (
 					<a href={card.link} target="_blank" rel="nofollow noreferrer">
-						<strong>🌐 Ссылка:</strong> {card.link}
+						<strong>🌐 Ссылка:</strong>{" "}
+						<span className="text-blue-500 underline underline-offset-4">
+							{card.link}
+						</span>
 					</a>
 				)}
 			</div>
