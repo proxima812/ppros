@@ -1,7 +1,7 @@
 const GroupCard = ({ card }) => {
 	return (
 		<article
-			className="break-inside-avoid-column rounded-xl p-5 border "
+			className="break-inside-avoid-column rounded-xl p-5 border mb-5"
 			card-time={card.created_at}
 			id={card.id}
 			key={card.id}

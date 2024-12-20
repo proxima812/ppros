@@ -1,0 +1,83 @@
+<div class="loader">
+	<div class="block"></div>
+	<div class="block"></div>
+	<div class="block"></div>
+	<div class="block"></div>
+	<div class="block"></div>
+	<div class="block"></div>
+</div>
+
+<style>
+	.loader {
+		position: relative;
+		width: 200px;
+		height: 200px;
+		perspective: 800px;
+	}
+
+	.block {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 60px;
+		height: 60px;
+		opacity: 0;
+		transform-origin: center;
+		transform: translate(-50%, -50%);
+		animation:
+			circleMove 3s ease-in-out forwards,
+			fadeIn 0.3s ease-out forwards;
+		border-radius: 10px;
+	}
+
+	/* Анимация движения по кругу и складывания */
+	@keyframes circleMove {
+		0% {
+			transform: translate(-50%, -50%) rotate(0deg) translateX(80px);
+		}
+		50% {
+			transform: translate(-50%, -50%) rotate(360deg) translateX(80px);
+		}
+		100% {
+			transform: translate(-50%, -50%) scale(0.5);
+		}
+	}
+
+	/* Анимация появления */
+	@keyframes fadeIn {
+		to {
+			opacity: 1;
+		}
+	}
+
+	/* Индивидуальные цвета и задержки */
+	.block:nth-child(1) {
+		background: linear-gradient(45deg, #ff7eb3, #ff758c);
+		animation-delay: 0s;
+	}
+
+	.block:nth-child(2) {
+		background: linear-gradient(45deg, #ff9a8b, #ff6a88);
+		animation-delay: 0.2s;
+	}
+
+	.block:nth-child(3) {
+		background: linear-gradient(45deg, #fbc2eb, #a6c1ee);
+		animation-delay: 0.4s;
+	}
+
+	.block:nth-child(4) {
+		background: linear-gradient(45deg, #84fab0, #8fd3f4);
+		animation-delay: 0.6s;
+	}
+
+	.block:nth-child(5) {
+		background: linear-gradient(45deg, #c2ffd8, #465efb);
+		animation-delay: 0.8s;
+	}
+
+	.block:nth-child(6) {
+		background: linear-gradient(45deg, #ff9a8b, #fad0c4);
+		animation-delay: 1s;
+	}
+</style>
