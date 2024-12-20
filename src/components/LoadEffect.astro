@@ -1,13 +1,52 @@
 <div class="loader">
-	<div class="block"></div>
-	<div class="block"></div>
-	<div class="block"></div>
-	<div class="block"></div>
-	<div class="block"></div>
-	<div class="block"></div>
+	<div
+		class="blockName tracking-tighter bg-gradient-to-br from-blue-700 to-blue-500 flex items-center justify-center"
+	>
+		<img src="/svg/AA.svg" alt="" class="object-cover" />
+	</div>
+	<div
+		class="blockName tracking-tighter bg-gradient-to-br from-blue-900 to-blue-700 flex items-center justify-center"
+	>
+		<img src="/svg/NA.svg" alt="" class="object-cover" />
+	</div>
+	<div
+		class="blockName tracking-tighter bg-gradient-to-br from-gray-100 to-white flex items-center justify-center"
+	>
+		<img src="/svg/papro.svg" alt="" class="object-cover" />
+	</div>
+	<div
+		class="blockName tracking-tighter bg-gradient-to-br from-green-300 to-emerald-400 flex items-center justify-center"
+	>
+		<img src="/svg/AIZ.svg" alt="" class="object-cover" />
+	</div>
+	<div
+		class="blockName tracking-tighter bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center"
+	>
+		<img src="/svg/VDA.svg" alt="" class="object-cover" />
+	</div>
+	<div
+		class="blockName tracking-tighter bg-gradient-to-br from-pink-500 to-red-300 flex items-center justify-center"
+	>
+		<img src="/svg/AC.svg" alt="" class="object-cover" />
+	</div>
+	<div class="blockName tracking-tighter all flex items-center justify-center">ВСЕ</div>
 </div>
 
 <style>
+	.all {
+		background-size: 100% 100%;
+		background-position:
+			0px 0px,
+			0px 0px,
+			0px 0px,
+			0px 0px,
+			0px 0px;
+		background-image: repeating-linear-gradient(315deg, #00ffff2e 92%, #073aff00 100%),
+			repeating-radial-gradient(75% 75% at 238% 218%, #00ffff12 30%, #073aff14 39%),
+			radial-gradient(99% 99% at 109% 2%, #00c9ffff 0%, #073aff00 100%),
+			radial-gradient(99% 99% at 21% 78%, #7b00ffff 0%, #073aff00 100%),
+			radial-gradient(160% 154% at 711px -303px, #2000ffff 0%, rgb(255, 81, 7) 100%);
+	}
 	.loader {
 		position: relative;
 		width: 200px;
@@ -15,7 +54,10 @@
 		perspective: 800px;
 	}
 
-	.block {
+	.blockName {
+    border: 1px solid white;
+		color: white;
+		font-weight: bold;
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -25,7 +67,7 @@
 		transform-origin: center;
 		transform: translate(-50%, -50%);
 		animation:
-			circleMove 3s ease-in-out forwards,
+			circleMove 4s ease-in-out forwards,
 			fadeIn 0.3s ease-out forwards;
 		border-radius: 10px;
 	}
@@ -39,7 +81,7 @@
 			transform: translate(-50%, -50%) rotate(360deg) translateX(80px);
 		}
 		100% {
-			transform: translate(-50%, -50%) scale(0.5);
+			transform: translate(-50%, -50%) scale(1.25);
 		}
 	}
 
@@ -51,33 +93,37 @@
 	}
 
 	/* Индивидуальные цвета и задержки */
-	.block:nth-child(1) {
-		background: linear-gradient(45deg, #ff7eb3, #ff758c);
+	.blockName:nth-child(1) {
+		/* background: linear-gradient(45deg, #ff7eb3, #ff758c); */
 		animation-delay: 0s;
 	}
 
-	.block:nth-child(2) {
-		background: linear-gradient(45deg, #ff9a8b, #ff6a88);
+	.blockName:nth-child(2) {
+		/* background: linear-gradient(45deg, #ff9a8b, #ff6a88); */
 		animation-delay: 0.2s;
 	}
 
-	.block:nth-child(3) {
-		background: linear-gradient(45deg, #fbc2eb, #a6c1ee);
+	.blockName:nth-child(3) {
+		/* background: linear-gradient(45deg, #fbc2eb, #a6c1ee); */
 		animation-delay: 0.4s;
 	}
 
-	.block:nth-child(4) {
-		background: linear-gradient(45deg, #84fab0, #8fd3f4);
+	.blockName:nth-child(4) {
+		/* background: linear-gradient(45deg, #84fab0, #8fd3f4); */
 		animation-delay: 0.6s;
 	}
 
-	.block:nth-child(5) {
-		background: linear-gradient(45deg, #c2ffd8, #465efb);
+	.blockName:nth-child(5) {
+		/* background: linear-gradient(45deg, #c2ffd8, #465efb); */
 		animation-delay: 0.8s;
 	}
 
-	.block:nth-child(6) {
-		background: linear-gradient(45deg, #ff9a8b, #fad0c4);
+	.blockName:nth-child(6) {
+		/* background: linear-gradient(45deg, blue, red); */
 		animation-delay: 1s;
+	}
+	.blockName:nth-child(7) {
+		/* background: linear-gradient(45deg, #ff9a8b, #fad0c4); */
+		animation-delay: 1.2s;
 	}
 </style>
