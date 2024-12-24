@@ -3,6 +3,8 @@ import GroupsList from "../components/GroupsList.astro"
 import Loader from "../components/Loader.astro"
 import TextUp from "../components/TextUp.astro"
 import Layout from "../layouts/Layout.astro"
+
+export const prerender = true
 ---
 
 <Layout>
@@ -12,7 +14,7 @@ import Layout from "../layouts/Layout.astro"
 
 			<GroupsList server:defer>
 				<div
-					class="container flex gap-5 mx-auto px-5 justify-center items-center"
+					class="container flex flex-wrap gap-5 mx-auto px-5 justify-center items-center"
 					slot="fallback"
 				>
 					<Loader />
