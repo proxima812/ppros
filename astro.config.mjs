@@ -8,7 +8,7 @@ import vercel from "@astrojs/vercel"
 // https://astro.build/config
 export default defineConfig({
 	site: "https://ppros.vercel.app",
-	output: "static",
+	output: "server",
 	integrations: [react(), tailwind()],
 	adapter: vercel({ isr: { expiration: 60 * 60 * 24 }, maxDuration: 60 }),
 })

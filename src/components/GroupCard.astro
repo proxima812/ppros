@@ -1,0 +1,63 @@
+---
+const { card } = Astro.props
+---
+
+<article
+	class="break-inside-avoid-column rounded-xl p-5 border mb-5"
+	card-time={card.created_at}
+	id={card.id}
+>
+	<div class={`flex flex-col gap-1 mb-1`}>
+		<h2>
+			<strong>🍀 Название:</strong>
+			{card.name}
+		</h2>
+		<span>
+			<strong>👥 Сообщество:</strong>
+			{card.community}
+		</span>
+		<time datetime={card.time}>
+			<strong>⏰ Время:</strong>
+			{card.time}
+		</time>
+		{
+			card.format && (
+				<span>
+					<strong>♨ Формат:</strong> {card.format}
+				</span>
+			)
+		}
+	</div>
+	{
+		card.description && (
+			<p class="py-4 -mt-1">
+				<strong>✨ Описание:</strong>{" "}
+				<span class="text-zinc-600 italic leading-relaxed">{card.description}</span>
+			</p>
+		)
+	}
+	<div class="flex flex-col gap-1">
+		<span>
+			<strong>🛜 Контакт:</strong>
+			{card.contact}
+		</span>
+		{
+			card.link && (
+				<a href={card.link} target="_blank" rel="nofollow noreferrer">
+					<strong>🌐 Ссылка:</strong>{" "}
+					<span class="text-blue-500 underline underline-offset-4">{card.link}</span>
+				</a>
+			)
+		}
+	</div>
+</article>
+
+<script>
+	import { animate, stagger } from "motion"
+
+	animate(
+		"article",
+		{ y: ["-20px", 0], opacity: [0, 1] },
+		{ duration: 0.5, delay: stagger(0.2) },
+	)
+</script>
