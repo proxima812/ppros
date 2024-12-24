@@ -1,16 +1,10 @@
 import Fuse from "fuse.js"
 import { useEffect, useState } from "react"
 import useSWR from "swr"
+import { supabase } from "../lib/supabase"
 import GroupCard from "./GroupCard"
 import Loader from "./Loader"
 import Search from "./Search"
-
-import { createClient } from "@supabase/supabase-js"
-
-const supabase = createClient(
-	import.meta.env.SUPABASE_URL,
-	import.meta.env.SUPABASE_ANON_KEY,
-)
 
 const fetcher = async () => {
 	const { data, error } = await supabase.from("groups").select("*")

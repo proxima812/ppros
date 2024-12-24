@@ -1,10 +1,9 @@
 ---
-import GroupsList from "../components/GroupsList.astro"
-import Loader from "../components/Loader.astro"
+import GroupList from "../components/GroupsList"
 import TextUp from "../components/TextUp.astro"
 import Layout from "../layouts/Layout.astro"
 
-export const prerender = true
+// export const prerender = true
 ---
 
 <Layout>
@@ -12,7 +11,7 @@ export const prerender = true
 		<div class="h-full flex-col flex gap-24 justify-center items-center">
 			<TextUp />
 
-			<GroupsList server:defer>
+			<!-- <GroupsList server:defer>
 				<div
 					class="container flex flex-wrap gap-5 mx-auto px-5 justify-center items-center"
 					slot="fallback"
@@ -21,11 +20,9 @@ export const prerender = true
 					<Loader />
 					<Loader />
 				</div>
-			</GroupsList>
+			</GroupsList> -->
 
-			<!-- <h1>В разработке еще..</h1> -->
-			<!-- <p><span class="text-red-500">*Форматирование</span></p> -->
-			<!-- <GroupList client:load /> -->
+			<GroupList client:load />
 		</div>
 	</main>
 </Layout>
