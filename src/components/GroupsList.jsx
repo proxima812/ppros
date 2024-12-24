@@ -1,7 +1,7 @@
 import Fuse from "fuse.js"
 import { useEffect, useState } from "react"
 import useSWR from "swr"
-import supabase from "../supabaseClient"
+import { supabase } from "../supabaseClient"
 import GroupCard from "./GroupCard"
 import Loader from "./Loader"
 import Search from "./Search"
