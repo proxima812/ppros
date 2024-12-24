@@ -2,6 +2,9 @@
 import GroupList from "../components/GroupsList"
 import TextUp from "../components/TextUp.astro"
 import Layout from "../layouts/Layout.astro"
+
+console.log("Supabase URL:", import.meta.env.SUPABASE_URL)
+console.log("Supabase Key:", import.meta.env.SUPABASE_ANON_KEY)
 ---
 
 <Layout>
